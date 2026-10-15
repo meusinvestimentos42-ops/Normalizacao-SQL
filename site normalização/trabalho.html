@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Normalização | Trabalho</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="tutorial-page">
+    <!-- Container principal do conteúdo do trabalho -->
+    <div class="tutorial-shell">
+      <!-- Cabeçalho fixo da página de apresentação -->
+      <header class="tutorial-header">
+        <div class="tutorial-brand">
+          <div class="brand-icon">🗄️</div>
+          <div class="brand-text">
+            <strong>Normalização</strong>
+            <span>Aprenda SQL com exercícios simples e interativos.</span>
+          </div>
+        </div>
+
+        <nav class="tutorial-top-nav" aria-label="Navegação superior">
+          <a href="index.html" aria-label="Início">Início</a>
+          <a href="participantes.html" aria-label="Participantes">Participantes</a>
+        </nav>
+      </header>
+
+      <!-- Layout com sidebar fixa e conteúdo principal -->
+      <div class="tutorial-layout">
+        <!-- Barra lateral de navegação do conteúdo -->
+        <aside class="tutorial-sidebar">
+          <nav class="tutorial-nav" aria-label="Menu de tópicos">
+            <a href="#introducao" class="active">Introdução ao SQL</a>
+            <a href="#oque-e-sql">O que é SQL?</a>
+            <a href="#bancos-relacionais">Bancos de dados relacionais</a>
+            <a href="#normalizacao">Normalização</a>
+            <a href="#formas-normais">Formas normais</a>
+          </nav>
+        </aside>
+
+        <!-- Conteúdo principal da apresentação -->
+        <main class="tutorial-content">
+          <section id="introducao" class="article-section">
+            <h1>Introdução ao SQL</h1>
+            <p>
+              Bem-vindo ao SQL Bolt, uma série de lições e exercícios interativos
+              projetados para ajudar você a aprender SQL diretamente no seu
+              navegador.
+            </p>
+          </section>
+
+          <section id="oque-e-sql" class="article-section">
+            <h2>O que é SQL?</h2>
+            <p>
+              SQL, ou Structured Query Language, é uma linguagem projetada para
+              permitir tanto o conteúdo técnico quanto o conteúdo lógico com
+              praticidade e clareza. Ela é usada para consultar, manipular e
+              transformar dados em um banco de dados relacional.
+            </p>
+
+            <div class="note-box">
+              <p><strong>Você sabia?</strong></p>
+              <p>
+                Existem muitos bancos de dados SQL populares, incluindo SQLite,
+                MySQL, PostgreSQL, Oracle e Microsoft SQL Server. Todos eles
+                suportam o padrão da linguagem SQL, e o que existe sete seria o
+                básico que você precisa aprender.
+              </p>
+            </div>
+          </section>
+
+          <section id="bancos-relacionais" class="article-section">
+            <h2>Bancos de dados relacionais</h2>
+            <p>
+              Antes de aprender a sintaxe SQL, é importante ter um modelo do que um
+              banco de dados relacional representa. Em um banco de dados
+              relacional, as informações são organizadas em tabelas (bidimensionais),
+              com linhas e colunas. Cada coluna possui um tipo de dado e cada linha
+              representa um registro. Esse modelo facilita a organização e a busca
+              por dados.
+            </p>
+
+            <p>
+              Por exemplo, em uma tabela de veículos, cada veículo teria uma linha
+              com dados sobre marca, modelo, número de portas, tipo e ano.
+            </p>
+
+            <div class="table-wrapper">
+              <p class="table-caption">Tabela: Veículos</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Marca/Modelo</th>
+                    <th># Rodas</th>
+                    <th># Portas</th>
+                    <th>Tipo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Ford Focus</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>Sedã</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section id="normalizacao" class="article-section">
+            <h2>Normalização</h2>
+            <p>
+              A normalização é um processo essencial para organizar os dados de um
+              banco de dados, eliminando redundâncias e reduzindo inconsistências.
+              Em vez de repetir informações em diversas tabelas, a organização é
+              feita de forma lógica para manter a integridade dos dados.
+            </p>
+          </section>
+
+          <section id="formas-normais" class="article-section">
+            <h2>Formas normais</h2>
+            <ul class="normal-form-list">
+              <li><strong>1NF:</strong> elimina grupos repetidos e garante que cada campo tenha apenas valores atômicos.</li>
+              <li><strong>2NF:</strong> assegura que todos os atributos dependam totalmente da chave primária.</li>
+              <li><strong>3NF:</strong> remove dependências transitivas para manter os dados consistentes.</li>
+              <li><strong>BCNF:</strong> reforça a integridade estrutural de forma mais rigorosa.</li>
+            </ul>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
