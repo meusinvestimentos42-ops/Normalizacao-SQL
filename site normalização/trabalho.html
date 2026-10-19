@@ -1,262 +1,248 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Normalização | Trabalho</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+<section id="formas-normais" class="article-section">
+  <h2>Pesquisa: 2FN e FNBC</h2>
 
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="tutorial-page">
-    <!-- Container principal do conteúdo do trabalho -->
-    <div class="tutorial-shell">
-      <!-- Cabeçalho fixo da página de apresentação -->
-      <header class="tutorial-header">
-        <div class="tutorial-brand">
-          <div class="brand-icon">🗄️</div>
-          <div class="brand-text">
-            <strong>Normalização</strong>
-            <span>Aprenda SQL com exercícios simples e interativos.</span>
-          </div>
-        </div>
+  <h3>1. Introdução</h3>
+  <p>
+    A normalização é um processo utilizado em bancos de dados relacionais
+    para organizar informações, reduzir redundâncias e evitar anomalias
+    de inserção, atualização e exclusão. Neste estudo, são abordadas a
+    Segunda Forma Normal (2FN) e a Forma Normal de Boyce-Codd (FNBC).
+  </p>
 
-        <nav class="tutorial-top-nav" aria-label="Navegação superior">
-          <a href="index.html" aria-label="Início">Início</a>
-          <a href="participantes.html" aria-label="Participantes">Participantes</a>
-        </nav>
-      </header>
+  <h3>2. Segunda Forma Normal (2FN)</h3>
+  <p>
+    A Segunda Forma Normal tem como objetivo eliminar dependências
+    parciais. Uma tabela está na 2FN quando atende à Primeira Forma
+    Normal (1FN) e todos os atributos não primos dependem funcionalmente
+    de toda chave candidata, e não apenas de uma parte dela.
+  </p>
+  <p>
+    Esse problema ocorre principalmente em tabelas com chaves compostas,
+    formadas por duas ou mais colunas.
+  </p>
 
-      <!-- Layout com sidebar fixa e conteúdo principal -->
-      <div class="tutorial-layout">
-        <!-- Barra lateral de navegação do conteúdo -->
-        <aside class="tutorial-sidebar">
-          <nav class="tutorial-nav" aria-label="Menu de tópicos">
-            <a href="#introducao" class="active">Introdução ao SQL</a>
-            <a href="#oque-e-sql">O que é SQL?</a>
-            <a href="#bancos-relacionais">Bancos de dados relacionais</a>
-            <a href="#normalizacao">Normalização</a>
-            <a href="#formas-normais">Formas normais</a>
-          </nav>
-        </aside>
+  <h4>2.1. Exemplo prático</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>ID_Aluno</th>
+        <th>ID_Curso</th>
+        <th>Nome_Aluno</th>
+        <th>Nome_Curso</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td><td>101</td><td>Ana</td><td>Banco de Dados</td>
+      </tr>
+      <tr>
+        <td>1</td><td>102</td><td>Ana</td><td>Programação</td>
+      </tr>
+      <tr>
+        <td>2</td><td>101</td><td>Pedro</td><td>Banco de Dados</td>
+      </tr>
+    </tbody>
+  </table>
 
-        <!-- Conteúdo principal da apresentação -->
-        <main class="tutorial-content">
-          <section id="introducao" class="article-section">
-            <h1>Introdução ao SQL</h1>
-            <p>
-              Bem-vindo ao SQL Bolt, uma série de lições e exercícios interativos
-              projetados para ajudar você a aprender SQL diretamente no seu
-              navegador.
-            </p>
-          </section>
+  <p>
+    A chave primária composta é formada por ID_Aluno e ID_Curso.
+    Entretanto, Nome_Aluno depende apenas de ID_Aluno, enquanto
+    Nome_Curso depende apenas de ID_Curso. Isso caracteriza
+    dependências parciais.
+  </p>
 
-          <section id="oque-e-sql" class="article-section">
-            <h2>O que é SQL?</h2>
-            <p>
-              SQL, ou Structured Query Language, é uma linguagem projetada para
-              permitir tanto o conteúdo técnico quanto o conteúdo lógico com
-              praticidade e clareza. Ela é usada para consultar, manipular e
-              transformar dados em um banco de dados relacional.
-            </p>
+  <h4>2.2. Aplicação da 2FN</h4>
+  <p>A tabela original pode ser dividida em três tabelas:</p>
 
-            <div class="note-box">
-              <p><strong>Você sabia?</strong></p>
-              <p>
-                Existem muitos bancos de dados SQL populares, incluindo SQLite,
-                MySQL, PostgreSQL, Oracle e Microsoft SQL Server. Todos eles
-                suportam o padrão da linguagem SQL, e o que existe sete seria o
-                básico que você precisa aprender.
-              </p>
-            </div>
-          </section>
+  <h4>Tabela Alunos</h4>
+  <table>
+    <thead><tr><th>ID_Aluno (PK)</th><th>Nome_Aluno</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Ana</td></tr>
+      <tr><td>2</td><td>Pedro</td></tr>
+    </tbody>
+  </table>
 
-          <section id="bancos-relacionais" class="article-section">
-            <h2>Bancos de dados relacionais</h2>
-            <p>
-              Antes de aprender a sintaxe SQL, é importante ter um modelo do que um
-              banco de dados relacional representa. Em um banco de dados
-              relacional, as informações são organizadas em tabelas (bidimensionais),
-              com linhas e colunas. Cada coluna possui um tipo de dado e cada linha
-              representa um registro. Esse modelo facilita a organização e a busca
-              por dados.
-            </p>
+  <h4>Tabela Cursos</h4>
+  <table>
+    <thead><tr><th>ID_Curso (PK)</th><th>Nome_Curso</th></tr></thead>
+    <tbody>
+      <tr><td>101</td><td>Banco de Dados</td></tr>
+      <tr><td>102</td><td>Programação</td></tr>
+    </tbody>
+  </table>
 
-            <p>
-              Por exemplo, em uma tabela de veículos, cada veículo teria uma linha
-              com dados sobre marca, modelo, número de portas, tipo e ano.
-            </p>
+  <h4>Tabela Matriculas</h4>
+  <table>
+    <thead><tr><th>ID_Aluno (PK, FK)</th><th>ID_Curso (PK, FK)</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>101</td></tr>
+      <tr><td>1</td><td>102</td></tr>
+      <tr><td>2</td><td>101</td></tr>
+    </tbody>
+  </table>
 
-            <div class="table-wrapper">
-              <p class="table-caption">Tabela: Veículos</p>
-              <table>
-                <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>Marca/Modelo</th>
-                    <th># Rodas</th>
-                    <th># Portas</th>
-                    <th>Tipo</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Ford Focus</td>
-                    <td>4</td>
-                    <td>4</td>
-                    <td>Sedã</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
+  <p>
+    Essa separação permite armazenar os dados dos alunos e dos cursos
+    uma única vez. A tabela Matriculas relaciona os alunos aos cursos
+    por meio de chaves estrangeiras.
+  </p>
 
-          <section id="normalizacao" class="article-section">
-            <h2>Normalização</h2>
-            <p>
-              A normalização é um processo essencial para organizar os dados de um
-              banco de dados, eliminando redundâncias e reduzindo inconsistências.
-              Em vez de repetir informações em diversas tabelas, a organização é
-              feita de forma lógica para manter a integridade dos dados.
-            </p>
-          </section>
+  <h4>2.3. Vantagens da 2FN</h4>
+  <ul>
+    <li>Reduz a redundância de informações.</li>
+    <li>Evita inconsistências durante atualizações.</li>
+    <li>Facilita a manutenção das tabelas.</li>
+    <li>Melhora a organização e a integridade dos dados.</li>
+  </ul>
 
-          <section id="formas-normais" class="article-section">
-            <h2>Formas normais</h2>
-            <p>
-              As formas normais são regras usadas na normalização de bancos de dados
-              relacionais. Elas ajudam a reduzir a repetição de informações e a evitar
-              anomalias de inserção, atualização e exclusão. A seguir, são apresentadas
-              a Segunda Forma Normal (2FN) e a Forma Normal de Boyce-Codd (FNBC), com
-              exemplos práticos.
-            </p>
+  <h3>3. Forma Normal de Boyce-Codd (FNBC)</h3>
+  <p>
+    A Forma Normal de Boyce-Codd (FNBC), conhecida em inglês como
+    <em>Boyce-Codd Normal Form</em> (BCNF), é mais rigorosa que a
+    Terceira Forma Normal (3FN).
+  </p>
+  <p>
+    Uma tabela está na FNBC quando, para toda dependência funcional
+    não trivial X → Y, o determinante X é uma superchave da relação.
+    Uma superchave é um conjunto de atributos capaz de identificar
+    unicamente cada registro.
+  </p>
 
-            <ul class="normal-form-list">
-              <li><strong>1FN:</strong> elimina grupos repetidos e garante que cada campo tenha apenas valores atômicos.</li>
-              <li><strong>2FN:</strong> elimina dependências parciais de atributos não primos em relação às chaves candidatas.</li>
-              <li><strong>3FN:</strong> trata dependências transitivas que podem gerar redundância.</li>
-              <li><strong>FNBC (BCNF):</strong> exige que todo determinante de uma dependência funcional não trivial seja uma superchave.</li>
-            </ul>
+  <h4>3.1. Exemplo prático</h4>
+  <table>
+    <thead>
+      <tr><th>Professor</th><th>Disciplina</th><th>Sala</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Ana</td><td>Matemática</td><td>A101</td></tr>
+      <tr><td>Bruno</td><td>História</td><td>B202</td></tr>
+      <tr><td>Ana</td><td>Física</td><td>A101</td></tr>
+    </tbody>
+  </table>
 
-            <h3>Segunda Forma Normal (2FN)</h3>
-            <p>
-              Uma tabela está na Segunda Forma Normal quando já atende à Primeira Forma
-              Normal e nenhum atributo não primo depende apenas de uma parte de uma
-              chave candidata composta. Esse tipo de problema é chamado de dependência
-              parcial. Ele pode fazer com que a mesma informação seja repetida em várias
-              linhas e provoque inconsistências quando os dados são alterados.
-            </p>
+  <p>Considere as seguintes regras de negócio:</p>
+  <ul>
+    <li>Cada professor é responsável por uma única sala.</li>
+    <li>Um professor pode ministrar várias disciplinas.</li>
+    <li>A combinação de professor e disciplina identifica cada registro.</li>
+  </ul>
 
-            <p><strong>Exemplo:</strong> considere uma tabela de matrículas cuja chave é a combinação de <code>ID_Aluno</code> e <code>ID_Curso</code>.</p>
-            <div class="table-wrapper">
-              <p class="table-caption">Tabela original: Matrículas</p>
-              <table>
-                <thead><tr><th>ID_Aluno</th><th>ID_Curso</th><th>Nome_Aluno</th><th>Nome_Curso</th></tr></thead>
-                <tbody>
-                  <tr><td>1</td><td>101</td><td>Ana</td><td>Banco de Dados</td></tr>
-                  <tr><td>1</td><td>102</td><td>Ana</td><td>Programação</td></tr>
-                  <tr><td>2</td><td>101</td><td>Pedro</td><td>Banco de Dados</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <p>
-              Nesse exemplo, <code>Nome_Aluno</code> depende somente de <code>ID_Aluno</code>,
-              e <code>Nome_Curso</code> depende somente de <code>ID_Curso</code>. Como a chave
-              é composta pelos dois identificadores, essas dependências são parciais.
-            </p>
+  <p>
+    Nesse cenário, existe a dependência funcional
+    <code>Professor → Sala</code>. Como Professor sozinho não identifica
+    cada registro, ele não é uma superchave. Portanto, essa dependência
+    viola a FNBC.
+  </p>
 
-            <p><strong>Como corrigir:</strong> separar as informações em três tabelas:</p>
-            <ul>
-              <li><strong>Alunos:</strong> <code>ID_Aluno</code>, <code>Nome_Aluno</code>.</li>
-              <li><strong>Cursos:</strong> <code>ID_Curso</code>, <code>Nome_Curso</code>.</li>
-              <li><strong>Matriculas:</strong> <code>ID_Aluno</code>, <code>ID_Curso</code>, usando os identificadores como chave composta e referências às tabelas correspondentes.</li>
-            </ul>
-            <p>
-              Com essa divisão, o nome do aluno e o nome do curso são armazenados uma
-              única vez nas respectivas tabelas. A 2FN reduz redundâncias e facilita a
-              manutenção e a consistência dos registros.
-            </p>
+  <h4>3.2. Aplicação da FNBC</h4>
+  <p>A tabela original pode ser decomposta em duas tabelas:</p>
 
-            <h3>Forma Normal de Boyce-Codd (FNBC)</h3>
-            <p>
-              A Forma Normal de Boyce-Codd, também chamada BCNF em inglês, é uma regra
-              mais rigorosa que a Terceira Forma Normal. Uma tabela está na FNBC quando,
-              para toda dependência funcional não trivial <code>X → Y</code>, o conjunto
-              de atributos <code>X</code> é uma superchave. Em outras palavras, todo
-              atributo ou conjunto de atributos que determina funcionalmente outros
-              atributos deve ser capaz de identificar unicamente as linhas da tabela.
-            </p>
+  <h4>Tabela Professores</h4>
+  <table>
+    <thead><tr><th>Professor (PK)</th><th>Sala</th></tr></thead>
+    <tbody>
+      <tr><td>Ana</td><td>A101</td></tr>
+      <tr><td>Bruno</td><td>B202</td></tr>
+    </tbody>
+  </table>
 
-            <p><strong>Exemplo:</strong> imagine uma tabela que registra professor, disciplina e sala. Considere a regra de negócio de que cada professor usa uma única sala, embora possa ministrar várias disciplinas.</p>
-            <div class="table-wrapper">
-              <p class="table-caption">Tabela original: Aulas</p>
-              <table>
-                <thead><tr><th>Professor</th><th>Disciplina</th><th>Sala</th></tr></thead>
-                <tbody>
-                  <tr><td>Ana</td><td>Matemática</td><td>A101</td></tr>
-                  <tr><td>Bruno</td><td>História</td><td>B202</td></tr>
-                  <tr><td>Ana</td><td>Física</td><td>A101</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <p>
-              Se a chave candidata for <code>(Professor, Disciplina)</code>, a dependência
-              <code>Professor → Sala</code> viola a FNBC: professor determina a sala, mas
-              Professor sozinho não é superchave, pois um professor pode aparecer em mais
-              de uma disciplina.
-            </p>
+  <h4>Tabela Aulas</h4>
+  <table>
+    <thead><tr><th>Professor (PK, FK)</th><th>Disciplina (PK)</th></tr></thead>
+    <tbody>
+      <tr><td>Ana</td><td>Matemática</td></tr>
+      <tr><td>Bruno</td><td>História</td></tr>
+      <tr><td>Ana</td><td>Física</td></tr>
+    </tbody>
+  </table>
 
-            <p><strong>Como corrigir:</strong> decompor a tabela em duas relações:</p>
-            <ul>
-              <li><strong>Professores:</strong> <code>Professor</code>, <code>Sala</code>.</li>
-              <li><strong>Aulas:</strong> <code>Professor</code>, <code>Disciplina</code>.</li>
-            </ul>
-            <p>
-              Assim, a sala fica registrada uma vez por professor, e a tabela de aulas
-              mantém a relação entre professor e disciplina. Essa decomposição é válida
-              para as regras de negócio assumidas no exemplo.
-            </p>
+  <p>
+    Na tabela Professores, cada professor é armazenado uma única vez,
+    junto à sua sala. Na tabela Aulas, ficam registradas as disciplinas
+    ministradas. Essa decomposição elimina a repetição desnecessária
+    das salas e permite reconstruir os dados originais sem perda de
+    informações, considerando as regras de negócio descritas.
+  </p>
 
-            <h3>Diferenças entre 2FN e FNBC</h3>
-            <div class="table-wrapper">
-              <table>
-                <thead><tr><th>Critério</th><th>2FN</th><th>FNBC</th></tr></thead>
-                <tbody>
-                  <tr><td>Objetivo</td><td>Eliminar dependências parciais.</td><td>Garantir que determinantes de dependências funcionais não triviais sejam superchaves.</td></tr>
-                  <tr><td>Foco</td><td>Atributos não primos dependentes de parte de uma chave candidata composta.</td><td>Dependências funcionais que podem envolver diferentes conjuntos de atributos.</td></tr>
-                  <tr><td>Resultado</td><td>Reduz redundâncias causadas por dependências parciais.</td><td>Elimina certas anomalias que podem continuar existindo mesmo após a 3FN.</td></tr>
-                </tbody>
-              </table>
-            </div>
+  <h4>3.3. Vantagens da FNBC</h4>
+  <ul>
+    <li>Elimina determinadas redundâncias que podem permanecer após a 3FN.</li>
+    <li>Reduz anomalias de inserção, atualização e exclusão.</li>
+    <li>Melhora a consistência e a integridade dos dados.</li>
+    <li>Contribui para uma estrutura de banco de dados mais organizada.</li>
+  </ul>
 
-            <h3>Conclusão</h3>
-            <p>
-              A 2FN e a FNBC contribuem para a construção de bancos de dados mais
-              organizados e consistentes. A 2FN elimina dependências parciais de atributos
-              não primos em relação às chaves candidatas, enquanto a FNBC aplica uma regra
-              mais rigorosa às dependências funcionais. A escolha da decomposição deve
-              sempre considerar as chaves e as regras de negócio do sistema, para reduzir
-              redundâncias sem perder informações importantes.
-            </p>
+  <h3>4. Diferenças entre 2FN e FNBC</h3>
+  <table>
+    <thead>
+      <tr><th>Critério</th><th>2FN</th><th>FNBC</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Objetivo</td>
+        <td>Eliminar dependências parciais.</td>
+        <td>Exigir que os determinantes das dependências funcionais não triviais sejam superchaves.</td>
+      </tr>
+      <tr>
+        <td>Foco</td>
+        <td>Dependências relacionadas a partes de chaves candidatas.</td>
+        <td>Dependências funcionais em geral.</td>
+      </tr>
+      <tr>
+        <td>Abrangência</td>
+        <td>Trata especificamente das dependências parciais.</td>
+        <td>É mais rigorosa que a 3FN.</td>
+      </tr>
+      <tr>
+        <td>Benefício</td>
+        <td>Reduz repetições causadas por dependências parciais.</td>
+        <td>Elimina determinadas anomalias que podem permanecer na 3FN.</td>
+      </tr>
+    </tbody>
+  </table>
 
-            <h3>Referências</h3>
-            <ul>
-              <li><a href="https://opentextbc.ca/dbdesign01/chapter/chapter-12-normalization/" target="_blank" rel="noopener noreferrer">BCcampus Open Education — Database Design: Normalization</a>.</li>
-              <li><a href="https://documents.uow.edu.au/~jrg/235/slides/03databasenormalization/03databasenormalization.html" target="_blank" rel="noopener noreferrer">University of Wollongong — Database Normalization</a>.</li>
-              <li><a href="https://eng.libretexts.org/Bookshelves/Computer_Science/Databases_and_Data_Structures/Relational_Databases_and_Microsoft_Access_%28McFadyen%29/10%3A_Normalization/10.05%3A_Boyce-Codd_Normal_Form_%28BCNF%29" target="_blank" rel="noopener noreferrer">LibreTexts — Boyce-Codd Normal Form (BCNF)</a>.</li>
-            </ul>
-          </section>
-        </main>
-      </div>
-    </div>
+  <p>
+    A FNBC implica a 3FN, a 2FN e a 1FN. Entretanto, uma tabela na 3FN
+    nem sempre atende à FNBC.
+  </p>
 
-    <script src="script.js"></script>
-  </body>
-</html>
+  <h3>5. Conclusão</h3>
+  <p>
+    A Segunda Forma Normal e a Forma Normal de Boyce-Codd são
+    importantes para a construção de bancos de dados relacionais
+    consistentes e eficientes. A 2FN elimina dependências parciais,
+    enquanto a FNBC estabelece uma regra mais rigorosa para as
+    dependências funcionais, exigindo que seus determinantes sejam
+    superchaves quando as dependências não forem triviais.
+  </p>
+  <p>
+    No contexto do projeto Normalização-SQL, a aplicação dessas formas
+    normais contribui para reduzir redundâncias, evitar inconsistências
+    e facilitar a manutenção das tabelas, resultando em estruturas
+    mais confiáveis e organizadas.
+  </p>
+
+  <h3>6. Referências bibliográficas</h3>
+  <ol>
+    <li>
+      BCcampus Open Education.
+      <strong>Database Design — Chapter 12: Normalization.</strong>
+      Disponível em:
+      <a href="https://opentextbc.ca/dbdesign01/chapter/chapter-12-normalization/"
+         target="_blank" rel="noopener noreferrer">
+        https://opentextbc.ca/dbdesign01/chapter/chapter-12-normalization/
+      </a>
+    </li>
+    <li>
+      LibreTexts.
+      <strong>Boyce-Codd Normal Form (BCNF).</strong>
+      Disponível em:
+      <a href="https://eng.libretexts.org/Bookshelves/Computer_Science/Databases_and_Data_Structures/Relational_Databases_and_Microsoft_Access_%28McFadyen%29/10%3A_Normalization/10.05%3A_Boyce-Codd_Normal_Form_%28BCNF%29"
+         target="_blank" rel="noopener noreferrer">
+        LibreTexts — Boyce-Codd Normal Form
+      </a>
+    </li>
+  </ol>
+</section>
