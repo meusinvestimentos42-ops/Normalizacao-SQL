@@ -172,8 +172,6 @@ No contexto do projeto Normalização-SQL, a aplicação dessas formas normais c
 
 1. BCcampus Open Education. **Database Design — Chapter 12: Normalization**. Disponível em: https://opentextbc.ca/dbdesign01/chapter/chapter-12-normalization/
 
-2. University of Wollongong. **Database Normalization**. Disponível em: https://documents.uow.edu.au/~jrg/235/slides/03databasenormalization/03databasenormalization.html
-
 3. LibreTexts. **Boyce-Codd Normal Form (BCNF)**. Disponível em: https://eng.libretexts.org/Bookshelves/Computer_Science/Databases_and_Data_Structures/Relational_Databases_and_Microsoft_Access_%28McFadyen%29/10%3A_Normalization/10.05%3A_Boyce-Codd_Normal_Form_%28BCNF%29
 
 
