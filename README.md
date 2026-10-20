@@ -14,10 +14,10 @@ Através de uma abordagem intuitiva e prática ("exemplo antes da teoria"), expl
 
 ## 👨‍💻 Autores e Equipe
 
-| Foto | Nome | Bio / Área | Links |
-| :---: | :--- | :--- | :--- |
-| <img src="URL_DA_FOTO_INTEGRANTE_1" width="80" style="border-radius: 50%;"> | **[Nome do Integrante 1]** | Estudante de Análise e Desenvolvimento de Sistemas. Foco em Backend e SQL. | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/SEU_USUARIO) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/SEU_LINKEDIN) |
-| <img src="URL_DA_FOTO_INTEGRANTE_2" width="80" style="border-radius: 50%;"> | **[Nome do Integrante 2]** | Estudante de Engenharia de Software. Foco em Frontend e UX. | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/SEU_USUARIO) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/SEU_LINKEDIN) |
+| Nome | Bio / Área | Links |
+| :--- | :--- | :--- |
+| **Isabella de Almeida Santos]** | Estudante de Ciências da Computação, com foco em Front-End e Full-Stake. |[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/SEU_LINKEDIN) |
+| **[Nome do Integrante 2]** | Estudante de Engenharia de Software. Foco em Frontend e UX. |[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/SEU_LINKEDIN) |
 
 *Nota sobre privacidade: A publicação de fotos e perfis profissionais foi devidamente autorizada por cada integrante do grupo para fins acadêmicos (LGPD).*
 
