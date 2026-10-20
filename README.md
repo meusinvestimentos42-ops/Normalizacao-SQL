@@ -17,8 +17,8 @@ Através de uma abordagem intuitiva e prática ("exemplo antes da teoria"), expl
 | Nome | Bio / Área | Links |
 | :--- | :--- | :--- |
 | **Isabella de Almeida Santos]** | Estudante de Ciências da Computação, com foco em Front-End e Full-Stake. |[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/SEU_LINKEDIN) |
-| **[Nome do Integrante 2]** | Estudante de Analise e Desenvolvimento de Sistemas, me encontro no 2° semestre do mesmo, área de interesse atualmente é seguir áreas que tenham contato com manipulação de dados. |[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/SEU_LINKEDIN) |
-| **Sara dos Santos de Oliveira** | Estudante de Engenharia de Software. Foco em Frontend e UX. |[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)]([https://linkedin.com/in/SEU_LINKEDIN](https://www.linkedin.com/in/sara-dos-santos-71913b42b?utm_source=share_via&utm_content=profile&utm_medium=member_android)) |
+| **Sara dos Santos de Oliveira** | Estudante de Analise e Desenvolvimento de Sistemas, me encontro no 2° semestre do mesmo, área de interesse atualmente é seguir áreas que tenham contato com manipulação de dados. |[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)]((https://www.linkedin.com/in/sara-dos-santos-71913b42b?utm_source=share_via&utm_content=profile&utm_medium=member_android))) |
+| **a** | Estudante de Engenharia de Software. Foco em Frontend e UX. |[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)]([https://linkedin.com/in/SEU_LINKEDIN] |
 
 
 *Nota sobre privacidade: A publicação de fotos e perfis profissionais foi devidamente autorizada por cada integrante do grupo para fins acadêmicos (LGPD).*
