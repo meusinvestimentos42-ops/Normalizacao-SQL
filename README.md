@@ -38,7 +38,7 @@ Através de uma abordagem intuitiva e prática ("exemplo antes da teoria"), expl
 3. **Design Responsivo e Sem Frameworks:** Construímos a página utilizando HTML5 estático e CSS3 puro, garantindo leveza, acessibilidade mobile e renderização rápida sem depender de servidores adicionais.
 
 ### 3. O que decidimos NÃO fazer
-* **Não cobrir Formas Normais Avançadas (BCNF, 4FN, 5FN):** Para manter a explicação profunda, focada e acessível ao público-alvo, decidimos restringir o escopo estritamente à 1FN, 2FN e 3FN.
+* **
 
 ---
 
