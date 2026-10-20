@@ -1,26 +1,50 @@
-# 🏦Normalização SQL🎲
+# 📚 Guia Prático de Normalização de Banco de Dados: 1FN, 2FN e 3FN
 
-Projeto acadêmico sobre **normalização de bancos de dados relacionais**, com foco na organização das tabelas, redução de redundâncias e garantia da integridade dos dados.
+> **Página do Projeto:** [https://normalizacao-sql.vercel.app/trabalho.html](https://normalizacao-sql.vercel.app/trabalho.html)
 
-O projeto apresenta conceitos e exemplos das formas normais, incluindo a Primeira Forma Normal (1FN), Segunda Forma Normal (2FN), Terceira Forma Normal (3FN), Forma Normal de Boyce-Codd (FNBC), etc.
+---
 
-O site foi desenvolvido com **HTML, CSS e JavaScript**, oferecendo conteúdo explicativo sobre normalização, exemplos práticos e referências para aprofundamento.
+## 📌 Sobre o Projeto
 
-## Objetivo
+Este projeto é um artigo técnico e interativo voltado para estudantes de TI e desenvolvedores iniciantes que já conhecem a sintaxe básica de SQL, mas desejam dominar a **modelagem relacional** e evitar armadilhas comuns em bancos de dados.
 
-Demonstrar como aplicar as técnicas de normalização para construir bancos de dados mais organizados, consistentes e fáceis de manter.
+Através de uma abordagem intuitiva e prática ("exemplo antes da teoria"), explicamos como identificar **anomalias de inserção, atualização e exclusão** e como aplicar a **Primeira (1FN), Segunda (2FN) e Terceira Formas Normais (3FN)** para decompor tabelas redundantes.
 
-## 🤖Tecnologias utilizadas
+---
 
-- HTML5
-- CSS3
-- JavaScript
-- SQL
+## 👨‍💻 Autores e Equipe
 
-## 📲Como executar
+| Foto | Nome | Bio / Área | Links |
+| :---: | :--- | :--- | :--- |
+| <img src="URL_DA_FOTO_INTEGRANTE_1" width="80" style="border-radius: 50%;"> | **[Nome do Integrante 1]** | Estudante de Análise e Desenvolvimento de Sistemas. Foco em Backend e SQL. | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/SEU_USUARIO) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/SEU_LINKEDIN) |
+| <img src="URL_DA_FOTO_INTEGRANTE_2" width="80" style="border-radius: 50%;"> | **[Nome do Integrante 2]** | Estudante de Engenharia de Software. Foco em Frontend e UX. | [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/SEU_USUARIO) [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/SEU_LINKEDIN) |
 
-1. Baixe ou clone o repositório.
-2. Extraia os arquivos, caso estejam compactados.
-3. Abra o arquivo `index.html` no navegador.
+*Nota sobre privacidade: A publicação de fotos e perfis profissionais foi devidamente autorizada por cada integrante do grupo para fins acadêmicos (LGPD).*
 
+---
 
+## 📊 Quadro de Observação e Decisões de Projeto
+
+### 1. Referências Analisadas
+* **DataCamp (Tutorial de Normalização):** Destacou-se pela clareza das comparações "antes e depois" com tabelas.
+* **DevMedia (Técnicas de Normalização):** Excelente uso de conceitos formais explicados em linguagem simples em português.
+
+### 2. Três Decisões do Grupo
+1. **Didática por Recorte Prático:** Optamos por usar como fio condutor um cenário real de **Planilha de Pedidos de uma Loja**, mostrando os problemas práticos antes de apresentar os termos formais como *dependência funcional*.
+2. **PostgreSQL como SGBD Padrão:** Padronizamos todos os scripts de exemplo para PostgreSQL (v15+), garantindo idempotência com comandos `DROP TABLE IF EXISTS` e `CREATE TABLE`.
+3. **Design Responsivo e Sem Frameworks:** Construímos a página utilizando HTML5 estático e CSS3 puro, garantindo leveza, acessibilidade mobile e renderização rápida sem depender de servidores adicionais.
+
+### 3. O que decidimos NÃO fazer
+* **Não cobrir Formas Normais Avançadas (BCNF, 4FN, 5FN):** Para manter a explicação profunda, focada e acessível ao público-alvo, decidimos restringir o escopo estritamente à 1FN, 2FN e 3FN.
+
+---
+
+## 🛠️ Como Executar os Scripts SQL Localmente
+
+### Pré-requisitos
+* **SGBD:** PostgreSQL (versão 15 ou superior) ou qualquer cliente SQL (DBeaver, pgAdmin, VS Code SQL Tools).
+
+### Passo a Passo
+1. Clone este repositório:
+   ```bash
+   git clone [https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git](https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git)
