@@ -16,10 +16,12 @@ Através de uma abordagem intuitiva e prática ("exemplo antes da teoria"), expl
 
 | Nome | Bio / Área | Links |
 | :--- | :--- | :--- |
-| **Isabella de Almeida Santos]** | Estudante de Ciências da Computação, com foco em Front-End e Full-Stake. | [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/sara-dos-santos-71913b42b/)](https://www.linkedin.com/in/sara-dos-santos-71913b42b/) [![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&link=https://github.com/meusinvestimentos42-ops/)](https://github.com/meusinvestimentos42-ops/) |
-| **Sara dos Santos de Oliveira** | Estudante de Analise e Desenvolvimento de Sistemas, me encontro no 2° semestre do mesmo, área de interesse atualmente é seguir áreas que tenham contato com manipulação de dados. | [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/sara-dos-santos-71913b42b/)](https://www.linkedin.com/in/sara-dos-santos-71913b42b/) [![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&link=https://github.com/sarasoliv/)](https://github.com/sarasoliv/)
-|
-| **a** | Estudante de Engenharia de Software. Foco em Frontend e UX. |[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/SEU_LINKEDIN) |
+| Nome | Bio / Área | Links |
+| :--- | :--- | :--- |
+| **Isabella de Almeida Santos]** | Estudante de Ciências da Computação, com foco em Front-End e Full-Stake. |[![LinkedIn]([https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/SEU_LINKEDIN](https://www.linkedin.com/in/isabella-de-almeida-santos-86bb333b0/?isSelfProfile=true)) |
+| **Sara dos Santos de Oliveira** | Estudante de Analise e Desenvolvimento de Sistemas, me encontro no 2° semestre do mesmo, área de interesse atualmente é seguir áreas que tenham contato com manipulação de dados. | [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/sara-dos-santos-71913b42b/)](https://www.linkedin.com/in/sara-dos-santos-71913b42b/) |
+| **Rodrygo Schadeck Gomes** | Estudante de TI. Cyber Segurança. |[![LinkedIn]([https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/SEU_LINKEDIN](https://www.linkedin.com/in/rodrygo-schadeck-gomes-3b034b313?utm_source=share_via&utm_content=profile&utm_medium=member_android)) |
+| **Yasmin Santos de Lima** | Estudante de Análise e desenvolvimento de sistema, forte interesse em Cybersegurança e fullstack. |[![LinkedIn](https://www.linkedin.com/in/yasm1nsantos/?isSelfProfile=true) |
 
 
 *Nota sobre privacidade: A publicação de fotos e perfis profissionais foi devidamente autorizada por cada integrante do grupo para fins acadêmicos (LGPD).*
