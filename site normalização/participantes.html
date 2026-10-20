@@ -1,189 +1,122 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
+    <!-- Metadados e recursos compartilhados da página da equipe -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Conheça os participantes do projeto acadêmico sobre normalização de bancos de dados." />
     <title>Normalização | Participantes</title>
-
-    <!-- Importação de fontes externas -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Link para o arquivo de estilo principal -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="tutorial-page participants-page">
-    <!-- Container principal do conteúdo do grupo -->
     <div class="tutorial-shell">
-      <!-- Cabeçalho fixo da página -->
+      <!-- Cabeçalho principal da página de participantes -->
       <header class="tutorial-header">
-        <div class="tutorial-brand">
-          <div class="brand-icon">👥</div>
-          <div class="brand-text">
-            <strong>Normalização</strong>
-            <span>Participantes do grupo</span>
-          </div>
-        </div>
-
-        <nav class="tutorial-top-nav" aria-label="Navegação superior">
-          <a href="index.html" aria-label="Início">Início</a>
-          <a href="trabalho.html" aria-label="Trabalho">Trabalho</a>
-          <a href="participantes.html" aria-label="Participantes">Participantes</a>
+        <a class="tutorial-brand" href="index.html">
+          <span class="brand-icon" aria-hidden="true">👥</span>
+          <span class="brand-text"><strong>Normalização SQL</strong><span>Participantes do grupo</span></span>
+        </a>
+        <nav class="tutorial-top-nav" aria-label="Navegação principal">
+          <a href="index.html">Início</a>
+          <a href="trabalho.html">Trabalho</a>
+          <a href="participantes.html" aria-current="page">Participantes</a>
         </nav>
       </header>
 
-      <!-- Layout com sidebar fixa e conteúdo principal -->
       <div class="tutorial-layout">
-        <!-- Lista dos participantes disponíveis -->
+        <!-- Menu lateral permite escolher o agradecimento ou um perfil -->
         <aside class="tutorial-sidebar">
           <nav class="tutorial-nav" aria-label="Menu de participantes">
             <a href="#agradecimento">Agradecimento</a>
             <a href="#isabella">Isabella de Almeida Santos</a>
-            <a href="#participante-2">Nome do aluno</a>
-            <a href="#participante-3">Nome do aluno</a>
-            <a href="#participante-4">Nome do aluno</a>
-            <a href="#participante-5">Nome do aluno</a>
+            <a href="#participante-2">Sara dos Santos de Oliveira</a>
+            <a href="#participante-3">Rodrygo Schadeck Gomes</a>
+            <a href="#participante-4">Yasmin Santos de Lima</a>
           </nav>
         </aside>
 
-        <!-- Conteúdo principal com dados do participante selecionado -->
         <main class="tutorial-content">
+          <!-- Agradecimento e cartões selecionáveis com fotos -->
           <section id="agradecimento" class="article-section participant-section is-visible">
             <div class="participant-hero">
-              <div class="participant-avatar">✦</div>
+              <div class="participant-avatar" aria-hidden="true">✦</div>
               <div class="participant-header-text">
-                <h1>Agradecimento aos Participantes</h1>
-                <p>Este trabalho sobre <em>Normalização em Banco de Dados</em> foi possível graças à dedicação e colaboração de cada participante envolvido.</p>
+                <h1>Agradecimento aos participantes</h1>
+                <p>Este trabalho sobre <em>Normalização em Banco de Dados</em> foi construído com a pesquisa e colaboração do grupo.</p>
               </div>
             </div>
-
-            <p>
-              Cada contribuição, ideia e esforço compartilhado ajudou a construir um
-              conteúdo mais completo e enriquecedor. Agradecemos pelo empenho, pela
-              troca de conhecimento e pelo compromisso em alcançar um resultado de
-              qualidade.
-            </p>
-
-            <p>
-              Que este projeto sirva como inspiração para futuras iniciativas e
-              continue fortalecendo o aprendizado coletivo.
-            </p>
+            <p>Cada contribuição ajudou a compor uma apresentação mais completa: reunimos conceitos, exemplos práticos, tabelas antes e depois e referências para aprofundamento.</p>
+            <p>Selecione um cartão para conhecer a contribuição de cada integrante e acessar seu perfil público.</p>
+            <h2>Conheça os participantes</h2>
+            <div class="participant-directory" aria-label="Selecione um participante para ver sua contribuição">
+              <a class="participant-card" href="#isabella"><img src="https://github.com/meusinvestimentos42-ops.png?size=160" alt="Foto de perfil do GitHub de Isabella de Almeida Santos" /><span>Isabella de Almeida Santos</span><span class="participant-card-action">Ver contribuição</span></a>
+              <a class="participant-card" href="#participante-2"><img src="https://github.com/sarasoliv.png?size=160" alt="Foto de perfil do GitHub de Sara dos Santos de Oliveira" /><span>Sara dos Santos de Oliveira</span><span class="participant-card-action">Ver contribuição</span></a>
+              <a class="participant-card" href="#participante-3"><img src="https://github.com/Rodrygo2766.png?size=160" alt="Foto de perfil do GitHub de Rodrygo Schadeck Gomes" /><span>Rodrygo Schadeck Gomes</span><span class="participant-card-action">Ver contribuição</span></a>
+              <a class="participant-card" href="#participante-4"><img src="https://github.com/Smil3rdbg.png?size=160" alt="Foto de perfil do GitHub de Yasmin Santos de Lima" /><span>Yasmin Santos de Lima</span><span class="participant-card-action">Ver contribuição</span></a>
+            </div>
           </section>
 
+          <!-- Perfil de Isabella: organização do site e apresentação -->
           <section id="isabella" class="article-section participant-section">
             <div class="participant-hero">
-              <div class="participant-avatar">I</div>
-              <div class="participant-header-text">
-                <h1>Isabella de Almeida Santos</h1>
-                <p>Organização do site, estruturação do conteúdo e apoio na criação do material principal.</p>
-              </div>
+              <div class="participant-avatar"><img src="https://github.com/meusinvestimentos42-ops.png?size=160" alt="Foto de perfil do GitHub de Isabella de Almeida Santos" /></div>
+              <div class="participant-header-text"><h1>Isabella de Almeida Santos</h1><p>Organização do site, estruturação do conteúdo e apoio na apresentação visual.</p></div>
             </div>
-
-            <p>
-              Isabella foi responsável pela organização do site, pela estruturação do
-              conteúdo e pelo auxílio na criação do material principal. Ela ajudou a
-              manter a apresentação visual e a organização geral do trabalho em uma
-              linguagem clara e objetiva.
-            </p>
-
-            <div class="participant-links">
-              <a href="#" class="profile-btn">GitHub</a>
-              <a href="#" class="profile-btn">LinkedIn</a>
-              <a href="#" class="profile-btn">E-mail</a>
-            </div>
+            <p>Isabella reuniu as páginas e os materiais em uma sequência fácil de acompanhar e ajudou a manter a apresentação visual coerente com o objetivo do trabalho. Também colaborou na organização do conteúdo e na busca de um vídeo complementar para apoiar a leitura.</p>
+            <div class="participant-links"><a class="profile-btn" href="https://github.com/meusinvestimentos42-ops" target="_blank" rel="noopener noreferrer">GitHub · Isabella</a></div>
+            <div class="participant-links"><a class="profile-btn" href="https://www.linkedin.com/in/isabella-de-almeida-santos-86bb333b0/?isSelfProfile=true" target="_blank" rel="noopener noreferrer">Linkedin · Isabella</a></div>
           </section>
 
+          <!-- Perfil de Sara: pesquisa de 1FN e 5FN -->
           <section id="participante-2" class="article-section participant-section">
             <div class="participant-hero">
-              <div class="participant-avatar">A</div>
-              <div class="participant-header-text">
-                <h2>Nome do aluno</h2>
-                <p>Função / Papel</p>
-              </div>
+              <div class="participant-avatar"><img src="https://github.com/sarasoliv.png?size=160" alt="Foto de perfil do GitHub de Sara dos Santos de Oliveira" /></div>
+              <div class="participant-header-text"><h1>Sara dos Santos de Oliveira</h1><p>Pesquisa sobre a Primeira Forma Normal (1FN) e a Quinta Forma Normal (5FN).</p></div>
             </div>
-
-            <p>
-              Descreva aqui o papel do integrante no desenvolvimento do trabalho,
-              incluindo sua contribuição para pesquisa, organização ou apresentação.
-            </p>
-
-            <div class="participant-links">
-              <a href="#" class="profile-btn">GitHub</a>
-              <a href="#" class="profile-btn">LinkedIn</a>
-              <a href="#" class="profile-btn">E-mail</a>
-            </div>
+            <p>Na parte de 1FN, Sara explicou por que cada célula deve guardar um valor atômico e mostrou como separar os telefones dos dados de clientes. Na 5FN, apresentou o cuidado necessário ao decompor relações em várias tabelas e o risco de surgirem tuplas espúrias quando uma junção não preserva os dados originais. Também forneceu a imagem originalmente indicada para ilustrar o tema.</p>
+            <div class="participant-links"><a class="profile-btn" href="https://github.com/sarasoliv" target="_blank" rel="noopener noreferrer">GitHub · Sara</a></div>
+            <div class="participant-links"><a class="profile-btn" href="https://www.linkedin.com/in/sara-dos-santos-71913b42b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">Linkedin · Sara</a></div>
           </section>
 
+          <!-- Perfil de Rodrygo: pesquisa de 3FN e 4FN -->
           <section id="participante-3" class="article-section participant-section">
             <div class="participant-hero">
-              <div class="participant-avatar">B</div>
-              <div class="participant-header-text">
-                <h2>Nome do aluno</h2>
-                <p>Função / Papel</p>
-              </div>
+              <div class="participant-avatar"><img src="https://github.com/Rodrygo2766.png?size=160" alt="Foto de perfil do GitHub de Rodrygo Schadeck Gomes" /></div>
+              <div class="participant-header-text"><h1>Rodrygo Schadeck Gomes</h1><p>Pesquisa sobre a Terceira Forma Normal (3FN) e a Quarta Forma Normal (4FN).</p></div>
             </div>
-
-            <p>
-              Descreva aqui o papel do integrante no desenvolvimento do trabalho,
-              incluindo sua contribuição para pesquisa, organização ou apresentação.
-            </p>
-
-            <div class="participant-links">
-              <a href="#" class="profile-btn">GitHub</a>
-              <a href="#" class="profile-btn">LinkedIn</a>
-              <a href="#" class="profile-btn">E-mail</a>
-            </div>
+            <p>Para a 3FN, Rodrygo apresentou o caso em que o identificador do departamento determina seu nome, criando uma dependência transitiva na tabela de funcionários. Para a 4FN, explicou como listas independentes — como especialidades médicas e idiomas falados — podem multiplicar combinações desnecessariamente e devem ser separadas em relações próprias.</p>
+            <div class="participant-links"><a class="profile-btn" href="https://github.com/Rodrygo2766" target="_blank" rel="noopener noreferrer">GitHub · Rodrygo</a></div>
+            <div class="participant-links"><a class="profile-btn" href="https://www.linkedin.com/in/rodrygo-schadeck-gomes-567890ab/?isSelfProfile=true" target="_blank" rel="noopener noreferrer">Linkedin · Rodrygo</a></div>
           </section>
 
+          <!-- Perfil de Yasmin: pesquisa de 2FN e FNBC -->
           <section id="participante-4" class="article-section participant-section">
             <div class="participant-hero">
-              <div class="participant-avatar">C</div>
-              <div class="participant-header-text">
-                <h2>Nome do aluno</h2>
-                <p>Função / Papel</p>
-              </div>
+              <div class="participant-avatar"><img src="https://github.com/Smil3rdbg.png?size=160" alt="Foto de perfil do GitHub de Yasmin Santos de Lima" /></div>
+              <div class="participant-header-text"><h1>Yasmin Santos de Lima</h1><p>Pesquisa sobre a Segunda Forma Normal (2FN) e a Forma Normal de Boyce-Codd (FNBC).</p></div>
             </div>
-
-            <p>
-              Descreva aqui o papel do integrante no desenvolvimento do trabalho,
-              incluindo sua contribuição para pesquisa, organização ou apresentação.
-            </p>
-
-            <div class="participant-links">
-              <a href="#" class="profile-btn">GitHub</a>
-              <a href="#" class="profile-btn">LinkedIn</a>
-              <a href="#" class="profile-btn">E-mail</a>
-            </div>
-          </section>
-
-          <section id="participante-5" class="article-section participant-section">
-            <div class="participant-hero">
-              <div class="participant-avatar">D</div>
-              <div class="participant-header-text">
-                <h2>Nome do aluno</h2>
-                <p>Função / Papel</p>
-              </div>
-            </div>
-
-            <p>
-              Descreva aqui o papel do integrante no desenvolvimento do trabalho,
-              incluindo sua contribuição para pesquisa, organização ou apresentação.
-            </p>
-
-            <div class="participant-links">
-              <a href="#" class="profile-btn">GitHub</a>
-              <a href="#" class="profile-btn">LinkedIn</a>
-              <a href="#" class="profile-btn">E-mail</a>
-            </div>
+            <p>Na 2FN, Yasmin mostrou como uma chave composta pode revelar dependências parciais: dados do aluno dependem do identificador do aluno e dados do curso, do identificador do curso. Na FNBC, apresentou uma regra mais rigorosa para dependências funcionais, exigindo que todo determinante não trivial seja superchave. Os exemplos ajudam a entender como as decomposições reduzem repetição e anomalias.</p>
+            <div class="participant-links"><a class="profile-btn" href="https://github.com/Smil3rdbg" target="_blank" rel="noopener noreferrer">GitHub · Yasmin</a></div>
+            <div class="participant-links"><a class="profile-btn" href="https://www.linkedin.com/in/yasm1nsantos/?isSelfProfile=true" target="_blank" rel="noopener noreferrer">Linkedin · Yasmin</a></div>
           </section>
         </main>
       </div>
-    </div>
 
+      <!-- Rodapé com informações do projeto e contatos -->
+      <footer class="site-footer">
+        <strong>Projeto acadêmico · Normalização SQL</strong>
+        <div class="footer-details">
+          <span>Publicação: data não informada</span>
+          <span>Licença: não informada</span>
+          <a href="#agradecimento">Contatos dos integrantes</a>
+          <span>Revisado em <time datetime="2026-10-20">20/10/2026</time></span>
+          <a href="https://github.com/meusinvestimentos42-ops/Normalizacao-SQL" target="_blank" rel="noopener noreferrer">Repositório</a>
+        </div>
+      </footer>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
