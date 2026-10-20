@@ -38,7 +38,7 @@ Através de uma abordagem intuitiva e prática ("exemplo antes da teoria"), expl
 3. **Design Responsivo e Sem Frameworks:** Construímos a página utilizando HTML5 estático e CSS3 puro, garantindo leveza, acessibilidade mobile e renderização rápida sem depender de servidores adicionais.
 
 ### 3. O que decidimos NÃO fazer
-* **
+* **Seguir um contexto só para exemplos:**Para melhor compreensão optamos por explorar contextos diferentes para cada FN.
 
 ---
 
