@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 340" role="img" aria-labelledby="title desc">
+  <title id="title">Separação de clientes e telefones para a Primeira Forma Normal</title>
+  <desc id="desc">Uma tabela inicial com dois telefones na mesma célula é separada em uma tabela de clientes e uma tabela de telefones com um número por linha.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#5278d8" />
+    </marker>
+    <style>
+      .title { font: 700 20px Arial, sans-serif; fill: #1f2d3d; }
+      .head { font: 700 15px Arial, sans-serif; fill: #fff; }
+      .cell { font: 14px Arial, sans-serif; fill: #26364a; }
+      .label { font: 700 13px Arial, sans-serif; fill: #4b5d78; }
+      .table { fill: #fff; stroke: #cbd7e8; stroke-width: 1.5; }
+      .headbg { fill: #466fd0; }
+      .line { stroke: #d8e1ee; stroke-width: 1; }
+    </style>
+  </defs>
+  <rect width="1000" height="340" rx="18" fill="#f5f8fd" />
+  <text x="500" y="34" text-anchor="middle" class="title">Um telefone por valor e por linha</text>
+
+  <text x="24" y="73" class="label">ANTES · lista na mesma célula</text>
+  <rect x="24" y="86" width="305" height="206" rx="10" class="table" />
+  <path d="M24 96 Q24 86 34 86 H319 Q329 86 329 96 V128 H24Z" class="headbg" />
+  <text x="44" y="112" class="head">Cliente</text>
+  <text x="193" y="112" class="head">Telefones</text>
+  <line x1="178" y1="86" x2="178" y2="292" class="line" />
+  <line x1="24" y1="128" x2="329" y2="128" class="line" />
+  <text x="44" y="157" class="cell">Ana Souza</text>
+  <text x="193" y="151" class="cell">(11) 98765-4321,</text>
+  <text x="193" y="171" class="cell">(11) 91111-2222</text>
+  <line x1="24" y1="190" x2="329" y2="190" class="line" />
+  <text x="44" y="222" class="cell">Carlos Silva</text>
+  <text x="193" y="222" class="cell">(11) 93333-4444</text>
+
+  <path d="M353 190 H406" fill="none" stroke="#5278d8" stroke-width="4" marker-end="url(#arrow)" />
+  <text x="379" y="172" text-anchor="middle" class="label">separar</text>
+
+  <text x="431" y="73" class="label">DEPOIS · relações organizadas</text>
+  <rect x="431" y="86" width="245" height="206" rx="10" class="table" />
+  <path d="M431 96 Q431 86 441 86 H666 Q676 86 676 96 V128 H431Z" class="headbg" />
+  <text x="451" y="112" class="head">Clientes</text>
+  <text x="451" y="157" class="cell">1 · Ana Souza</text>
+  <line x1="431" y1="128" x2="676" y2="128" class="line" />
+  <line x1="431" y1="190" x2="676" y2="190" class="line" />
+  <text x="451" y="222" class="cell">2 · Carlos Silva</text>
+
+  <rect x="711" y="86" width="265" height="206" rx="10" class="table" />
+  <path d="M711 96 Q711 86 721 86 H966 Q976 86 976 96 V128 H711Z" class="headbg" />
+  <text x="731" y="112" class="head">Telefones</text>
+  <text x="731" y="151" class="cell">1 · Cliente 1 · (11) 98765-4321</text>
+  <line x1="711" y1="164" x2="976" y2="164" class="line" />
+  <text x="731" y="187" class="cell">2 · Cliente 1 · (11) 91111-2222</text>
+  <line x1="711" y1="200" x2="976" y2="200" class="line" />
+  <text x="731" y="225" class="cell">3 · Cliente 2 · (11) 93333-4444</text>
+
+  <path d="M676 145 H694 V181 H711 M676 237 H694 V181" fill="none" stroke="#8ba3d4" stroke-width="2" />
+  <text x="500" y="320" text-anchor="middle" class="label">A chave estrangeira relaciona cada telefone ao cliente correspondente.</text>
+</svg>
