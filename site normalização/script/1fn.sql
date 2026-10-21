@@ -1,6 +1,30 @@
 CREATE DATABASE exemplos_normalizacao;
 
---1FN
+/*
+--VIOLA 1FN
+CREATE TABLE cliente_nao_normalizado (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    logradouro VARCHAR(150) NOT NULL,
+    bairro VARCHAR(100) NOT NULL,
+    cidade VARCHAR(100) NOT NULL,
+    uf VARCHAR(2) NOT NULL,
+    telefones VARCHAR(200) NOT NULL 
+);
+
+-- Inserindo os dados de forma aglutinada
+INSERT INTO cliente_nao_normalizado (nome, logradouro, bairro, cidade, uf, telefones) VALUES 
+('Ana Souza', 'rua das flores, 100', 'centro', 'São Paulo', 'SP', '(11) 98765-4321, (11) 91111-2222'),
+('Carlos Silva', 'avenida Paulista, 500', 'bela vista', 'São Paulo', 'SP', '(11) 93333-4444');
+
+-- Consulta simples (sem JOIN, mas cheia de problemas de estrutura)
+SELECT * FROM cliente_nao_normalizado;
+*/
+
+
+
+
+--1FN (MANEIRA CORRETA)
 CREATE TABLE cliente (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL
