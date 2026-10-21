@@ -1,4 +1,31 @@
---2FN
+/*
+--VIOLA 2FN
+CREATE TABLE matricula_nao_normalizada (
+    aluno_id INT,
+    curso_id INT,
+    -- ERRO DE 2FN: O nome do aluno depende apenas de aluno_id (metade da chave)
+    nome_aluno VARCHAR(100) NOT NULL, 
+    -- ERRO DE 2FN: O nome do curso depende apenas de curso_id (a outra metade da chave)
+    nome_curso VARCHAR(100) NOT NULL, 
+    
+    -- Chave primária composta
+    PRIMARY KEY (aluno_id, curso_id)
+);
+
+-- Inserindo os dados de forma redundante
+INSERT INTO matricula_nao_normalizada (aluno_id, curso_id, nome_aluno, nome_curso) VALUES 
+(1, 1, 'Ana', 'Banco de Dados'),
+(1, 2, 'Ana', 'Programacao'),       -- Repete o nome 'Ana' desnecessariamente
+(2, 1, 'Pedro', 'Banco de Dados');  -- Repete o curso 'Banco de Dados' desnecessariamente
+
+-- Consulta simples (sem JOINs)
+SELECT 
+    nome_aluno, 
+    nome_curso 
+FROM matricula_nao_normalizada;
+*/
+
+--2FN (MANEIRA CORRETA)
 CREATE TABLE aluno(
     id SERIAL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL
