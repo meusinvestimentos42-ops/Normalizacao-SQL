@@ -1,9 +1,6 @@
 # 📚 Guia Prático de Normalização de Banco de Dados: 1FN, 2FN e 3FN
 
-> **Página do Projeto:** (https://normalizacao-sql.vercel.app/index.html)
----
-
-<small> ***Projeto acadêmico⭐*** </small>
+<small> ***Projeto acadêmico⭐*** </small> > **Página do Projeto:** (https://normalizacao-sql.vercel.app/index.html)
 
 ---
 
