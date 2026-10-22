@@ -2,7 +2,9 @@
 
 > **Página do Projeto:** (https://normalizacao-sql.vercel.app/index.html)
 ---
+
 <small> ***Projeto acadêmico⭐*** </small>
+
 ---
 
 ## 📌 Sobre o Projeto
